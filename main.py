@@ -1,5 +1,6 @@
 import pyotp
 import time
+import os
 
-totp = pyotp.TOTP('pcvrvcc3nasssimv33fde2fhk5ukfizs')
+totp = pyotp.TOTP(os.environ['OTP_SECRET'])
 print(totp.now())
